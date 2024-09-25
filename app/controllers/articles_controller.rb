@@ -39,8 +39,8 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
 
-    redirect_to root_path, status: :see_other
-    #redirect_to articles_path, notice: 'Article was successfully deleted.'
+    #redirect_to root_path, status: :see_other
+    redirect_to articles_path, notice: 'Article was successfully deleted.'
   end
 
   private
